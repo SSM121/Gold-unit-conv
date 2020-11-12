@@ -28,7 +28,9 @@ def convert(request):
         Conversion.objects.get(start_type=f)
         Conversion.objects.get(start_type=t)
         v = float(v)
-        return JsonResponse({"units" : t, "value" : equation(False, t, equation(True, f, v))})
+        response = JsonResponse({"units" : t, "value" : equation(False, t, equation(True, f, v))})
     except:
-        return JsonResponse({"error": "Invalid unit conversion request"})
+        response = JsonResponse({"error": "Invalid unit conversion request"})
+    response['Access-Control-Allow-Origin'] = '*'
+    return response;
 
