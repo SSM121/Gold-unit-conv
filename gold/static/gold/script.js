@@ -1,7 +1,7 @@
 /* TODO: Build up the HTML document by using JavaScript DOM manipulation functions.
  * Do not rely on changes you may have made to index.html because the grader won't use that file.
  */
-const apiKey = 'api_key=MhQQMmL2qz2yRMm-fv8g';
+
 var theData;
 var theVal;
 function changeValue(response){
